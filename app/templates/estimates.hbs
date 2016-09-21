@@ -1,7 +1,7 @@
 <h2>Estimates</h2>
 <ul>
-  <li>{{link-to '30 Day Transformation' 'estimate.tasks' '30-day-transformation'}}</li>
-  <li>{{link-to 'Fragd' 'estimate.tasks' 'fragd'}}</li>
-  <li>{{link-to 'Fashion Style Mag' 'estimate.tasks' 'fashion-style-mag'}}</li>
+  {{#each model as |estimate|}}
+    <li>{{link-to estimate.title 'estimate' estimate.title}}</li>
+  {{/each}}
 </ul>
 {{outlet}}
