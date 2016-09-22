@@ -1,7 +1,10 @@
 <h2>Estimates</h2>
 <ul>
   {{#each model as |estimate|}}
-    <li>{{link-to estimate.title 'estimate' estimate.title}}</li>
+    <li>
+      <span {{action 'favoriteClicked' estimate}}>[ Favorite ]</span>
+      {{link-to estimate.title 'estimate' estimate.title}}
+    </li>
   {{/each}}
 </ul>
 {{outlet}}
