@@ -15,6 +15,9 @@ export default Ember.Route.extend({
   actions: {
     favoriteClicked(estimate) {
       this.get('favorites').favoriteItem(estimate);
+    },
+    createEstimate() {
+      console.log('clicked');
     }
   }
 
