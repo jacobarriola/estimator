@@ -1,12 +1,15 @@
 <h2>Estimates</h2>
+<h3>Total estimates: {{model.length}}</h3>
 
 <ul>
-  <li>
-    {{input type="text" class="new-band" placeholder="New band" value=title}}
-    <button {{action "createEstimate"}}>Add</button>
-  </li>
-  {{#each model as |estimate|}}
-    {{estimate-item estimate=estimate on-fav-clicked='favoriteClicked'}}
-  {{/each}}
+		<li>
+			  <form {{action "createEstimate" on="submit"}}>
+			    {{input type="text" placeholder="New Estimate" value=title}}
+			    <button type="submit">Add</button>
+			  </form>
+		</li>
+				{{#each model as |estimate|}}
+		        {{estimate-item estimate=estimate on-fav-clicked='favoriteClicked'}}
+				{{/each}}
 </ul>
 {{outlet}}
