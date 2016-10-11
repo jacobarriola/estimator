@@ -14,7 +14,9 @@ export default Ember.Route.extend({
 		createEstimate() {
 		    var store = this.get('store');
 		    var title = this.get('controller').get('title');
-		    var estimate = store.createRecord('estimate',{title: title});
+		    var estimate = store.createRecord('estimate', {
+					title: title
+				});
 
 		    this.modelFor('estimates').pushObject(estimate);
 			this.get('controller').set('title', '');
