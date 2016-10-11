@@ -1,4 +1,5 @@
 <h2>Estimates</h2>
+
 <h3>Total estimates: {{model.length}}</h3>
 
 <ul>
@@ -8,8 +9,9 @@
 			    <button type="submit">Add</button>
 			  </form>
 		</li>
-				{{#each model as |estimate|}}
-		        {{estimate-item estimate=estimate on-fav-clicked='favoriteClicked'}}
-				{{/each}}
+		{{#each model as |estimate|}}
+        {{estimate-item title=estimate.title}}
+		{{/each}}
 </ul>
+
 {{outlet}}
