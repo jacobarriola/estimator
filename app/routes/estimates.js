@@ -13,14 +13,11 @@ export default Ember.Route.extend({
 
 	actions: {
 		createEstimate() {
-	    var store = this.get('store');
-	    var title = this.get('controller').get('title');
-	    var estimate = store.createRecord('estimate', {
-	    	'title': title
-	    });
-			estimate.save();
-
-		  this.modelFor('estimates').pushObject(estimate);
+		    let store = this.get('store');
+		    let title = this.get('controller').get('title');
+		    let estimate = store.createRecord('estimate', { 'title': title });
+		    estimate.save();
+			this.modelFor('estimates').pushObject(estimate);
 			this.get('controller').set('title', '');
 		}
 	}
