@@ -3,12 +3,8 @@ import Ember from 'ember';
 export default Ember.Route.extend({
 
 	model() {
-	    // return [
-	    //     {title: "30-day-transformation"},
-	    //     {title: "fragd"},
-	    //     {title: "fashion-style-mag"}
-	    // ];
-		return this.store.findAll('estimate').then(estimates => estimates.toArray()); // https://github.com/emberjs/data/issues/3313
+		// WP only returns 10 posts, so using query instead of findAll('estimate')
+		return this.store.query('estimate', {per_page: 99}).then(estimates => estimates.toArray()); // https://github.com/emberjs/data/issues/3313
     },
 
 	actions: {
