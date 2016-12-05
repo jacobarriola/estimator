@@ -5,11 +5,11 @@
 		<li>
 			  <form {{action "createEstimate" on="submit"}}>
 			    {{input type="text" placeholder="New Estimate" value=title}}
-			    <button type="submit">Add</button>
+			    <button type="submit">Create New Estimate</button>
 			  </form>
 		</li>
 		{{#each model as |estimate|}}
-			{{estimate-item estimate=estimate}}
+			{{estimate-item title=estimate.title}}
 		{{/each}}
 </ul>
 
