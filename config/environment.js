@@ -4,7 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'estimator',
     environment: environment,
-    wordpressHost: 'http://estimator-wp:8888',
+    wordpressHost: 'http://estimator-wp.dev',
     rootURL: '/',
     locationType: 'auto',
     EmberENV: {
