@@ -8,7 +8,9 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('estimates'); // /estimates
-  this.route('estimate', {path: 'estimate/:id'} );
+  this.route('estimate', {path: 'estimate/:id'}, function() {
+    this.route('tasks');
+  });
   this.route('notfound', {path: '*path'}); // 404
 });
 
